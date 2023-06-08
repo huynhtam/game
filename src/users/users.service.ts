@@ -10,4 +10,8 @@ export class UsersService {
     @InjectRepository(UserEntity)
     private userRepository: Repository<UserEntity>,
   ) {}
+
+  async findByEmail(email: string): Promise<UserEntity> {
+    return this.userRepository.findOneBy({ email });
+  }
 }
