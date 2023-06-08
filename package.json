@@ -21,9 +21,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli -d ormconfig.ts",
     "migration:create": "sh -c 'ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli migration:create ./src/db/migrations/${0}'",
-    "migration:generate": "sh -c 'pnpm typeorm migration:generate ./src/db/migrations/${0}'",
-    "migration:run": "pnpm build && pnpm typeorm migration:run",
-    "migration:revert": "pnpm typeorm migration:revert"
+    "migration:generate": "sh -c 'npm typeorm migration:generate ./src/db/migrations/${0}'",
+    "migration:run": "npm build && npm typeorm migration:run",
+    "migration:revert": "npm typeorm migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
